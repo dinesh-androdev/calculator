@@ -1,3 +1,4 @@
+import com.google.firebase.appdistribution.gradle.firebaseAppDistribution
 import java.util.Properties
 
 plugins {
@@ -9,15 +10,15 @@ plugins {
 
 // Local-only credentials live in keystore.properties (git-ignored). In CI these same
 // keys are provided as environment variables (from GitHub Secrets) instead.
-val keystoreProperties = Properties().apply {
-    val file = rootProject.file("keystore.properties")
-    if (file.exists()) {
-        file.inputStream().use { load(it) }
+val keystoreProperties =
+    Properties().apply {
+        val file = rootProject.file("keystore.properties")
+        if (file.exists()) {
+            file.inputStream().use { load(it) }
+        }
     }
-}
 
-fun secret(key: String): String? =
-    keystoreProperties.getProperty(key) ?: System.getenv(key)
+fun secret(key: String): String? = keystoreProperties.getProperty(key) ?: System.getenv(key)
 
 android {
     namespace = "com.example.calculator"
