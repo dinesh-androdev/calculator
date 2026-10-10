@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="hint_first_number">First number</string>
+    <string name="hint_second_number">Second number</string>
+    <string name="button_add">Add (+)</string>
+    <string name="result_placeholder">Result: —</string>
+    <string name="result_format">Result: %1$s</string>
+    <string name="error_invalid_input">Please enter valid numbers</string>
+</resources>
