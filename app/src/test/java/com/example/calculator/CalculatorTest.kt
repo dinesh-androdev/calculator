@@ -4,7 +4,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class CalculatorTest {
-
     @Test
     fun add_twoPositiveNumbers_returnsSum() {
         assertEquals(5.0, Calculator.add(2.0, 3.0), 0.0)

@@ -5,6 +5,8 @@ package com.example.calculator
  * Add one operation at a time here as you expand the app.
  */
 object Calculator {
-
-    fun add(a: Double, b: Double): Double = a + b
+    fun add(
+        a: Double,
+        b: Double,
+    ): Double = a + b
 }
